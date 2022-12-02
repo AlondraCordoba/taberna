@@ -8,13 +8,19 @@ import { AppService } from './services/app.service';
 })
 export class AppComponent {
   title = 'taberna-website';
-  constructor ( private _scripts: ScriptsService, public _appService: AppService){
+  constructor(private _scripts: ScriptsService, public _appService: AppService) {
     _scripts.carga(["main"])
   }
   contactForm(form: any) {
     this._appService.sendMessage(form).subscribe(() => {
-    window.alert("Mensaje enviado correctamente");
+      window.alert("Mensaje enviado correctamente");
     });
-    }
+  }
+
+  ticketForm(form: any) {
+    this._appService.buyTicket(form).subscribe(() => {
+      window.alert("Mensaje enviado correctamente");
+    });
+  }
 
 }
