@@ -17,6 +17,6 @@ export class AppService {
   }
 
   buyTickets(ticket: ReservationModel) {
-    return this.http.post('https://web-production-ce2a.up.railway.app/', ticket).toPromise();
+    return this.http.post('https://web-production-ce2a.up.railway.app/reservs', ticket).toPromise();
   }
 }
