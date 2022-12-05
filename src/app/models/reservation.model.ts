@@ -1,11 +1,10 @@
 export class ReservationModel {
     //_id?: string;
     _id?: number;
-    name!: string;
-    tickets!: number;
-    date!: string;
-    phone!: string;
+    nombre!: string;
+    boletosReservados!: number;
+    totalPago!: 150;
+    telefono!: number;
     email!: string;
-    time!: string;
     disponible: boolean = true;
 };

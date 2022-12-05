@@ -553,10 +553,8 @@
         <form autocomplete="off" (ngSubmit)="buyTicket(form)" #form="ngForm" class="" role="form">
           <div class="row">
             <div class="col-lg-4 col-md-6 form-group">
-                <input type="text" class="form-control" placeholder="Name" name="Nombre" [(ngModel)]="ticket.name" #name="ngModel" data-rule="minlen:4"
+                <input type="text" class="form-control" placeholder="Nombre" name="Nombre" [(ngModel)]="ticket.nombre" #nombre="ngModel" data-rule="minlen:4"
                 data-msg="Please enter at least 4 chars" id="name">
-
-              <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
                 <input type="email" class="form-control" placeholder="Email" name="Email" [(ngModel)]="ticket.email" #email="ngModel" data-rule="email"
@@ -564,29 +562,15 @@
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
-                <input type="text" class="form-control" placeholder="Teléfono" name="phone" [(ngModel)]="ticket.phone" #phone="ngModel" data-rule="minlen:4"
+                <input type="text" class="form-control" placeholder="Teléfono" name="telefono" [(ngModel)]="ticket.telefono" #telefono="ngModel" data-rule="minlen:4"
                 data-msg="Please enter at least 4 chars" id="phone">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
-              <input type="text" class="form-control" placeholder="Fecha" name="date" [(ngModel)]="ticket.date" #date="ngModel" data-rule="minlen:4"
-                data-msg="Please enter at least 4 chars" id="date">
+                <input type="number" class="form-control" placeholder="# de Boletos" name="boletosReservados" [(ngModel)]="ticket.boletosReservados" #boletosReservados="ngModel" data-rule="minlen:1"
+                data-msg="Please enter at least 1 char" id="boletosReservados">
               <div class="validate"></div>
             </div>
-            <div class="col-lg-4 col-md-6 form-group mt-3">
-              <input type="text" class="form-control" placeholder="Hora" name="time" [(ngModel)]="ticket.time" #time="ngModel" data-rule="minlen:4"
-                data-msg="Please enter at least 4 chars" id="time">
-              <div class="validate"></div>
-            </div>
-            <div class="col-lg-4 col-md-6 form-group mt-3">
-                <input type="number" class="form-control" placeholder="# de Boletos" name="tickets" [(ngModel)]="ticket.tickets" #name="ngModel" data-rule="minlen:1"
-                data-msg="Please enter at least 1 char" id="tickets">
-              <div class="validate"></div>
-            </div>
-          </div>
-          <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
-            <div class="validate"></div>
           </div>
           <div class="text-center"><button type="submit">Apartar</button></div>
         </form>
@@ -673,7 +657,6 @@
 
       </div>
     </section>
-
 
     <section id="testimonials" class="testimonials">
       <div class="container position-relative">
